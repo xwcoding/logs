@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '7p=0&sv@z*xbg&s^glnon0)n+!shgfq60jv3#2w!m2t!cgpgh_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -145,7 +145,10 @@ if os.getcwd() == '/app':
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers.
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['*']
+
+# allow only heroku to host the project
+ALLOWED_HOSTS = ['everydaylogs.herokuapp.com']
 
 # Static asset configuration
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
